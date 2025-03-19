@@ -16,38 +16,8 @@ public class Fire : MonoBehaviour
 
             // Destroi o projetil
             Destroy(gameObject);
+            GameManager.PlayerScore1 += 10;
         }
-        else if (collision.gameObject.CompareTag("0"))
-        {
-            // Destroi o inimigo
-            Destroy(collision.gameObject);
-
-            // Destroi o projetil
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.CompareTag("1"))
-        {
-            // Destroi o inimigo
-            Destroy(collision.gameObject);
-
-            // Destroi o projetil
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.CompareTag("2"))
-        {
-            // Destroi o inimigo
-            Destroy(collision.gameObject);
-
-            // Destroi o projetil
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.CompareTag("3"))
-        {
-            // Destroi o inimigo
-            Destroy(collision.gameObject);
-
-            // Destroi o projetil
-            Destroy(gameObject);
-        }
+       
     }
 }

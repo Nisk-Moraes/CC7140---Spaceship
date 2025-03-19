@@ -71,6 +71,7 @@ public class PlayerControlls : MonoBehaviour
 
     void Slowmotion()
     {
+        var inimigos = GameObject.FindGameObjectsWithTag("Enemy");
         var projeteis = GameObject.FindGameObjectsWithTag("pipoco");
         if(paralax.SLOWMO == 1){
             paralax.SLOWMO = 0.5f;
@@ -82,6 +83,11 @@ public class PlayerControlls : MonoBehaviour
             Rigidbody2D rbProjectile = projeteis[i].GetComponent<Rigidbody2D>();
             rbProjectile.velocity = Vector2.right * projectileSpeed * paralax.SLOWMO;
         }
+        for (int i=0; i<inimigos.Length; i++){
+            Rigidbody2D rbEnemy = inimigos[i].GetComponent<Rigidbody2D>();
+            rbEnemy.velocity = Vector2.right * SpawnEnemy.inimigoSpeed * paralax.SLOWMO *-1f;
+        }
+
     }
     void Shoot()
     {
