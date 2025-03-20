@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControlls : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerControlls : MonoBehaviour
     public KeyCode moveLeft = KeyCode.S;   // Movimento para a Baixo
     public float speed = 10.0f;
 
+    public GameObject enemy;
+    
     // Limites de movimento
     public float boundY = 5.0f;
     private Rigidbody2D rb2d;
@@ -97,4 +100,17 @@ public class PlayerControlls : MonoBehaviour
         rbProjectile.velocity = Vector2.right * projectileSpeed * paralax.SLOWMO;  // Movimenta o projétil para o lado
 
     }
+
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Verifica se o objeto colidido é um inimigo
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            SceneManager.LoadScene("derrota");
+        }
+       
+    }
+
+
 }

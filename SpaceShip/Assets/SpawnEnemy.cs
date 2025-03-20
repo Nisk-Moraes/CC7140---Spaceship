@@ -15,7 +15,7 @@ public class SpawnEnemy : MonoBehaviour
         
     }
     void SpawnarInimigo(){
-            var escolha = Random.Range(-3.0f,3.0f);
+            var escolha = Random.Range(-2.3f,2.3f);
             
            
             GameObject inimigo = Instantiate(inimigoPrefab, transform.position + (transform.up * escolha), Quaternion.identity);

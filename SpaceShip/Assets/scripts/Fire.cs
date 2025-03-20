@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fire : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class Fire : MonoBehaviour
             // Destroi o projetil
             Destroy(gameObject);
             GameManager.PlayerScore1 += 10;
+        }
+        if(GameManager.PlayerScore1 > 50)
+        {
+            SceneManager.LoadScene("vitoria");
         }
        
     }

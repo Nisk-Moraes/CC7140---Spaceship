@@ -45,7 +45,8 @@ public class mae : MonoBehaviour
         GameManager gameManager = FindObjectOfType<GameManager>();
         if (gameManager != null)
         {
-            gameManager.AddScore(pontos);
+            // gameManager.AddScore(pontos);
+            print("test");
         }
         else
         {

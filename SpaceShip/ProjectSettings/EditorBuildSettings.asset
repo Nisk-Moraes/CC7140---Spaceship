@@ -6,6 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Fase1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/vitoria.unity
+    guid: f31f9de2918ee0b44b2c954dd393b949
+  - enabled: 1
+    path: Assets/Scenes/derrota.unity
+    guid: c924efdf79542c14a8029049afd19414
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
